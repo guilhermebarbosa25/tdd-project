@@ -1,0 +1,5 @@
+testes de funcionais são escritos sob a perspectiva do usuario, garantindo que o sistema funcione como o usuario deseja
+testes funcionais são escritos sob a perspectiva do desenvolvedor, garantindo que cada pequena parte do código final execute o que foi planejado
+
+testes funcionais podem envolver mais de uma funcionalidade/parte do sistema e ser mais complexos
+testes de unidade precisam ser simples e automatizados para garantir a rapida testagem a cada modificação
