@@ -47,11 +47,9 @@ class NewVisitorTest(unittest.TestCase):
         inputbox.send_keys('Estudar testes de unidade')
         inputbox.send_keys(Keys.ENTER)
         time.sleep(1)
-
         # A pagina atualiza novamente, e agora mostra ambos os itens na sua lista
         self.check_for_row_in_list_table('1: Estudar testes funcionais')
         self.check_for_row_in_list_table('2: Estudar testes de unidade')
-        inputbox.send_keys(Keys.ENTER)
         time.sleep(1)
 
         # A pagina atualiza novamente, e agora mostra ambos os itens na sua lista
