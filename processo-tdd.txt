@@ -1,0 +1,5 @@
+O flugrama pode ser descrito comoum fluxo de TDD focado nos testes de unidade aninhado com o fluxo de TDD focado no teste funcional
+Em outras palavras, o fluxo relata o desenvolvimento que se inicia pela escrita do teste funcional
+posteriormente ele é executado (e vai falhar) e entramos na escrita do teste unitário, execução, escrita de código minimo
+e refatoração até que o teste unitário esteja ok e o código nao precise de mais refatorações
+quando chegamos a este ponto, podemos prosseguir com o fluxo semelhante para o teste funcional, refatorando e ajustando o codigo dos testes unitarios sempre.
