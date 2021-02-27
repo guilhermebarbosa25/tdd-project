@@ -1,10 +1,9 @@
+from django.test import LiveServerTestCase
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
-import unittest
 
-class NewVisitorTest(unittest.TestCase):
-
+class NewVisitorTest(LiveServerTestCase):
     def setUp(self):
         self.browser = webdriver.Firefox()
 
@@ -21,7 +20,7 @@ class NewVisitorTest(unittest.TestCase):
     def test_can_start_a_list_and_retrieve_it_later(self): 
     
         # Maria decidiu utilizar o novo app TODO. Ela entra em sua pagina principal:
-        self.browser.get('http://localhost:8000')
+        self.browser.get(self.live_server_url)
 
         # Ela nota que o titulo da pagina menciona TODO
         self.assertIn('To-Do', self.browser.title)
@@ -64,6 +63,3 @@ class NewVisitorTest(unittest.TestCase):
         # Ela visita a URL: a sua lista TODO ainda esta armazenada
 
         # Satisfeita, ela vai dormir
-
-if __name__ == '__main__':
-    unittest.main()
