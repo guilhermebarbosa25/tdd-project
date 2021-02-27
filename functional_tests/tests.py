@@ -42,11 +42,9 @@ class NewVisitorTest(LiveServerTestCase):
 
         # Ela digita "Estudar testes funcionais" em uma caixa de texto
         inputbox.send_keys('Estudar testes funcionais')
-
         # Quando ela aperta enter, a pagina atualiza, e mostra a lista
         # "1: Estudar testes funcionais" como um item da lista TODO
         inputbox.send_keys(Keys.ENTER)
-        time.sleep(1)
         self.wait_for_row_in_list_table('1: Estudar testes funcionais')
         
         # Ainda existe uma caixa de texto convidando para adicionar outro item
@@ -98,7 +96,6 @@ class NewVisitorTest(LiveServerTestCase):
         inputbox = self.browser.find_element_by_id('id_new_item')
         inputbox.send_keys('Comprar leite')
         inputbox.send_keys(Keys.ENTER)
-
         self.wait_for_row_in_list_table('1: Comprar leite')
 
         # Joao pega sua URL unica
